@@ -455,6 +455,7 @@ class VirtualizedList extends StateSafePureComponent<Props, State> {
       // REACT-NATIVE-WEB patch to preserve during future RN merges: Support inverted wheel scroller.
     // For issue https://github.com/necolas/react-native-web/issues/995
     this.invertedWheelEventHandler = (ev: any) => {
+      return;
       const scrollOffset = this.props.horizontal ? ev.target.scrollLeft : ev.target.scrollTop;
       const scrollLength = this.props.horizontal ? ev.target.scrollWidth : ev.target.scrollHeight;
       const clientLength = this.props.horizontal ? ev.target.clientWidth : ev.target.clientHeight;
